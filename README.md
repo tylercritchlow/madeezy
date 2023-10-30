@@ -18,6 +18,6 @@ The repository contains the following folders:
 * Music by [musician name]
 * Sound effects by [sound designer name]
 
-## License
+## Contributing
 
-This game is released under the [license name] license.
+Please email all game assets that you would like to contribute, including art or 3D models, to tyler@tntsplash.net.
