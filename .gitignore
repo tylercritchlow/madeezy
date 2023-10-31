@@ -32,3 +32,22 @@ sysinfo.txt
 
 # Builds
 *.apk
+
+# JetBrains Rider specific
+.idea/
+*.suo
+*.user
+.vs/
+
+# Visual Studio artifacts
+[Bb]in/
+[Oo]bj/
+_UpgradeReport_Files/
+
+# NuGet packages
+[Pp]ackages/
+
+# Windows and macOS specific files
+Thumbs.db
+Desktop.ini
+.DS_Store
