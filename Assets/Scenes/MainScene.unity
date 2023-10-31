@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 621877741}
   - component: {fileID: 621877740}
   m_Layer: 0
-  m_Name: Virtual Camera
+  m_Name: ThirdPersonCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -928,8 +928,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.8735578, y: 1.9045546, z: 4.109095}
-  m_Center: {x: -0.06299329, y: 0.08875561, z: 1.5545518}
+  m_Size: {x: 1.8735578, y: 1.9045546, z: 2.651597}
+  m_Center: {x: -0.06299329, y: 0.088755615, z: 0.8258068}
 --- !u!4 &124484960219037107
 Transform:
   m_ObjectHideFlags: 0
