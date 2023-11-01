@@ -7,7 +7,7 @@ public class Testing : MonoBehaviour
     public CharacterController controller;
     public Transform cam;
     public float speed = 6f;
-    private float turnSmoothVelocity;
+    private float _turnSmoothVelocity;
     private bool _groundedPlayer;
     
     public float turnSmoothTime = 0.1f;
@@ -22,8 +22,9 @@ public class Testing : MonoBehaviour
     public float gravityValue = -9.81f;
     
     
-    // Update is called once per frame
-    private void Update()
+    // FixedUpdate is called once per physics frame.
+    // This is the best place to handle physics-related code.
+    private void FixedUpdate()
     {
         _groundedPlayer = controller.isGrounded;
 
@@ -34,12 +35,12 @@ public class Testing : MonoBehaviour
         if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _turnSmoothVelocity, turnSmoothTime);
             
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            controller.Move(moveDir.normalized * speed * Time.fixedDeltaTime);
         }
         
         if (Input.GetButtonDown("Jump") && _groundedPlayer)
@@ -48,9 +49,9 @@ public class Testing : MonoBehaviour
         }
 
         // Apply gravity to the player.
-        _playerVelocity.y += gravityValue * Time.fixedDeltaTime;
+        _playerVelocity.y += gravityValue * Time.deltaTime;
 
         // Move the player again, this time taking gravity into account.
-        controller.Move(_playerVelocity * Time.fixedDeltaTime);
+        controller.Move(_playerVelocity * Time.deltaTime);
     }
 }
