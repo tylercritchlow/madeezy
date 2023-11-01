@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening; //tweening asset DOTween, found in Unity Asset Store
+using DG.Tweening; // tweening asset DOTween, found in Unity Asset Store
 
 public class ButtonScript : MonoBehaviour
 {
@@ -18,21 +18,21 @@ public class ButtonScript : MonoBehaviour
         BroadcastMessage("HandleButtonLeave", gameObject);
     }
 
-    void HandleButtonPress(GameObject gameObject)
+    void HandleButtonPress(GameObject gObj)
     {
         Debug.Log(gameObject.transform.position);
         
         Transform parentObject = gameObject.transform.parent;
-        Vector3 tweenPositionStart = gameObject.transform.parent.position;
+        Vector3 tweenPositionStart = gObj.transform.parent.position;
 
         DOTween.Init();
         parentObject.transform.DOMoveY(tweenPositionStart.y - 0.2f, 3);
     }
 
-    void HandleButtonLeave(GameObject gameObject)
+    void HandleButtonLeave(GameObject gObj)
     {
         Transform parentObject = gameObject.transform.parent;
-        Vector3 tweenPositionStart = gameObject.transform.parent.position;
+        Vector3 tweenPositionStart = gObj.transform.parent.position;
 
         DOTween.Init();
         parentObject.transform.DOMoveY(tweenPositionStart.y + 0.2f, 3);
