@@ -3135,3 +3135,106 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:scripting/monoscript/fileName/vCreateBasicCharacterEditor.cs: 7f74d2e3b0eb5251b33ad51091ae7bdc -> 
   custom:scripting/monoscript/fileName/vThirdPersonMotor.cs: 7f8423fa48c814436427177ca8599753 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image C:\Users\tyler\Madeezy\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\tyler\Madeezy\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in 10.320 seconds
+Refreshing native plugins compatible for Editor in 5.65 ms, found 3 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  6.074 seconds
+Domain Reload Profiling: 16369ms
+	BeginReloadAssembly (3711ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (129ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (4ms)
+		CreateAndSetChildDomain (2498ms)
+	RebuildCommonClasses (348ms)
+	RebuildNativeTypeToScriptingClass (51ms)
+	initialDomainReloadingComplete (316ms)
+	LoadAllAssembliesAndSetupDomain (5867ms)
+		LoadAssemblies (4785ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (1764ms)
+			TypeCache.Refresh (1705ms)
+				TypeCache.ScanAssembly (1505ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (57ms)
+	FinalizeReload (6076ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2857ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (243ms)
+			SetLoadedEditorAssemblies (60ms)
+			BeforeProcessingInitializeOnLoad (697ms)
+			ProcessInitializeOnLoadAttributes (1691ms)
+			ProcessInitializeOnLoadMethodAttributes (152ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (101ms)
+Refreshing native plugins compatible for Editor in 25.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5041 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (1.5 MB). Loaded Objects now: 6252.
+Memory consumption went from 256.2 MB to 254.7 MB.
+Total: 34.984400 ms (FindLiveObjects: 6.520200 ms CreateObjectMapping: 5.317500 ms MarkObjects: 21.159200 ms  DeleteObjects: 1.984900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/vThirdPersonInputEditor.cs: 5093624aea7998e0aebaeee9bc24d9ab -> 
+  custom:scripting/monoscript/fileName/vThirdPersonAnimator.cs: 3f164cc8309ba6f321c51db588f4fc34 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/vInvectorWelcomeWindow.cs: 26521ae5168e4a179d8e102f1490e504 -> 
+  custom:scripting/monoscript/fileName/ReadmeEditor.cs: ff7ced1e41c1b99ddf5dfefc88f6bd50 -> 
+  custom:scripting/monoscript/fileName/vCharacterEditor.cs: f1bd74882e7b3c54fdd5ca0e6ef4b853 -> 
+  custom:scripting/monoscript/fileName/vHelperEditor.cs: f2d4dbde0d511f98747a39b8803ba148 -> 
+  custom:scripting/monoscript/fileName/vThirdPersonInput.cs: 88ce389858b02b6444f6b5ad6a8c2de1 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/vExtensions.cs: c3d402263dd2da3a86a3c5cc248e5827 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/vPickupItem.cs: 488a596863ee3d370a4177af434e1a49 -> 
+  custom:scripting/monoscript/fileName/vAnimateUV.cs: fc91a3cec6a97383c9bfe7d58ab5d4b9 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/vComment.cs: 8189466712302c4c00e76ba6ec327b37 -> 
+  custom:scripting/monoscript/fileName/Readme.cs: 5aedf578fb2663036982fb7b05aaf325 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/vInvectorStartup.cs: 32525d5eb9e943d59e8dfbe7cf41455d -> 
+  custom:scripting/monoscript/fileName/vThirdPersonCameraEditor.cs: 7d052028e137419841a4dfce8ce1578f -> 
+  custom:scripting/monoscript/fileName/ThirdPersonMovement.cs: f5d4abf6d0615952883141cc968f77da -> 
+  custom:scripting/monoscript/fileName/vCommentEditor.cs: 8909b09bc75972eb73e3eabb3ed1ccf6 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/vEditorStartupPrefs.cs: fded071429ab4e4045d298df4cd112ae -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:scripting/monoscript/fileName/vThirdPersonController.cs: 7f659f6225ce273dd5bc790c7e420737 -> 
+  custom:scripting/monoscript/fileName/vThirdPersonCamera.cs: 57a43024d76a91ac821f833f81afc3e9 -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/vCreateBasicCharacterEditor.cs: 7f74d2e3b0eb5251b33ad51091ae7bdc -> 
+  custom:scripting/monoscript/fileName/vThirdPersonMotor.cs: 7f8423fa48c814436427177ca8599753 -> 
