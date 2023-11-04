@@ -207,7 +207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.31622782, y: -0.00000002827297, z: 0.000000009424324, w: 0.9486833}
+  m_LocalRotation: {x: 0.31622782, y: 0.00000002827297, z: -0.000000009424324, w: 0.9486833}
   m_LocalPosition: {x: -2.32, y: 9.190001, z: 5.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -514,7 +514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533411358}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.28155822, y: -0.000000028596647, z: 0.00000000839109, w: 0.9595442}
+  m_LocalRotation: {x: 0.28155822, y: -0.000000028596649, z: 0.00000000839109, w: 0.9595442}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1146,7 +1146,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1689810289}
   - component: {fileID: 1689810288}
-  - component: {fileID: 1689810290}
   m_Layer: 0
   m_Name: FreeLook Camera
   m_TagString: Untagged
@@ -1277,22 +1276,6 @@ Transform:
   - {fileID: 533411360}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1689810290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1689810287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb7194dc27b9df64c8beca7482ee8e0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerIndex: -1
-  AutoEnableInputs: 1
-  XYAxis: {fileID: 0}
-  ZAxis: {fileID: 0}
 --- !u!1 &1770415173
 GameObject:
   m_ObjectHideFlags: 3
@@ -1614,7 +1597,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133472690}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.31622776, y: -3e-45, z: 1e-45, w: 0.9486833}
+  m_LocalRotation: {x: 0.31622776, y: 1e-45, z: -0, w: 0.9486833}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1816,28 +1799,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &972636178098241863
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5824424303460925831}
-  m_Enabled: 0
-  m_Avatar: {fileID: 9000000, guid: de76d67d0ab88dc439b10b32370775ea, type: 3}
-  m_Controller: {fileID: 9100000, guid: fecf6d756e0aaae41ada7c746eed59b9, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1071339952915779395
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,6 +1824,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3254635953075070762}
+  - component: {fileID: 3254635953075070763}
   m_Layer: 0
   m_Name: metarig
   m_TagString: Untagged
@@ -2178,6 +2140,28 @@ Transform:
   - {fileID: 1639438399871808723}
   m_Father: {fileID: 6602087559336074045}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3254635953075070763
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132197336057566410}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: de76d67d0ab88dc439b10b32370775ea, type: 3}
+  m_Controller: {fileID: 9100000, guid: fecf6d756e0aaae41ada7c746eed59b9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &3325844930604665915
 Transform:
   m_ObjectHideFlags: 0
@@ -2830,8 +2814,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6602087559336074045}
-  - component: {fileID: 972636178098241863}
   - component: {fileID: 6602087559336074047}
+  - component: {fileID: 6602087559336074048}
   - component: {fileID: 6602087559336074046}
   m_Layer: 0
   m_Name: Player
@@ -3010,7 +2994,22 @@ MonoBehaviour:
   controller: {fileID: 6602087559336074046}
   cam: {fileID: 330585546}
   speed: 6
-  turnSmoothTime: 0.1
+  jumpHeight: 1
+  gravityValue: -9.81
+--- !u!114 &6602087559336074048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5824424303460925831}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a13cc99e22ee5a4da581201950036df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  playerSpeed: 6
   jumpHeight: 1
   gravityValue: -9.81
 --- !u!4 &6750799855507039068

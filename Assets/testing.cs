@@ -43,11 +43,9 @@ public class Testing : MonoBehaviour
         
 
 
-        // If the player presses the jump button and they are grounded,
-        // give them an upward velocity.
+        // If the player presses the jump button and they are grounded, give them an upward velocity.
         if (Input.GetButtonDown("Jump") && _groundedPlayer)
         {
-            Debug.Log("Grounded player && jump button pressed"); 
             _playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
         }
 
