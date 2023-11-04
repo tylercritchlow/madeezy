@@ -1,50 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Testing : MonoBehaviour
 {
     public CharacterController controller;
     public Transform cam;
-    public float speed = 6f;
     private float _turnSmoothVelocity;
+    private readonly float _turnSmoothTime = 0.1f;
     private bool _groundedPlayer;
     
-    public float turnSmoothTime = 0.1f;
-    
-    // The player's current velocity.
+    // All movement variables
+    public float speed = 6f;
+    public float jumpHeight = 1.0f;
+    public float gravityValue = -9.81f;
     private Vector3 _playerVelocity;
     
-    // The height of the player's jump.
-    public float jumpHeight = 1.0f;
 
-    // The value of gravity.
-    public float gravityValue = -9.81f;
-    
-    
-    // FixedUpdate is called once per physics frame.
-    // This is the best place to handle physics-related code.
-    private void FixedUpdate()
+
+    private void Update()
     {
         _groundedPlayer = controller.isGrounded;
+        
+        // Don't delete this, it breaks the jump
+        if (_groundedPlayer && _playerVelocity.y < 0)
+        {
+            _playerVelocity.y = 0f;
+        }
 
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+        var horizontal = Input.GetAxisRaw("Horizontal");
+        var vertical = Input.GetAxisRaw("Vertical");
+        var direction = new Vector3(horizontal, 0f, vertical).normalized;
 
         if (direction.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _turnSmoothVelocity, turnSmoothTime);
+            var targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            var angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _turnSmoothVelocity, _turnSmoothTime);
             
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
-            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDir.normalized * speed * Time.fixedDeltaTime);
+            var moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            controller.Move(moveDir.normalized * (speed * Time.deltaTime));
         }
         
+
+
+        // If the player presses the jump button and they are grounded,
+        // give them an upward velocity.
         if (Input.GetButtonDown("Jump") && _groundedPlayer)
         {
+            Debug.Log("Grounded player && jump button pressed"); 
             _playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
         }
 
