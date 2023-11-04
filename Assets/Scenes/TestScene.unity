@@ -207,7 +207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.31622782, y: 0.00000002827297, z: -0.000000009424324, w: 0.9486833}
+  m_LocalRotation: {x: 0.31622782, y: -0.00000002827297, z: 0.000000009424324, w: 0.9486833}
   m_LocalPosition: {x: -2.32, y: 9.190001, z: 5.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -514,7 +514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533411358}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.28155822, y: -0.000000028596649, z: 0.00000000839109, w: 0.9595442}
+  m_LocalRotation: {x: 0.2815582, y: -1.4372795e-16, z: 7.760611e-16, w: 0.9595442}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1381,8 +1381,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781418747}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.98}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.9799996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1597,7 +1597,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133472690}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.31622776, y: 1e-45, z: -0, w: 0.9486833}
+  m_LocalRotation: {x: 0.31622776, y: -3e-45, z: 1e-45, w: 0.9486833}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2686,11 +2686,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: 162f6e15f01dd3e4e8626083a36f7e33, type: 3}
 --- !u!1 &5431739732161392734
@@ -2817,6 +2817,7 @@ GameObject:
   - component: {fileID: 6602087559336074047}
   - component: {fileID: 6602087559336074048}
   - component: {fileID: 6602087559336074046}
+  - component: {fileID: 6602087559336074049}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2992,6 +2993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 6602087559336074046}
+  playerInput: {fileID: 6602087559336074049}
   cam: {fileID: 330585546}
   speed: 6
   jumpHeight: 1
@@ -3012,6 +3014,37 @@ MonoBehaviour:
   playerSpeed: 6
   jumpHeight: 1
   gravityValue: -9.81
+--- !u!114 &6602087559336074049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5824424303460925831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: c98a28de2a5e4154b94b44a3c8ea6e6e,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Move
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!4 &6750799855507039068
 Transform:
   m_ObjectHideFlags: 0
