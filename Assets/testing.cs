@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Testing : MonoBehaviour
 {
     public CharacterController controller;
+    public PlayerInput playerInput;
     public Transform cam;
     private float _turnSmoothVelocity;
     private readonly float _turnSmoothTime = 0.1f;
@@ -26,8 +28,8 @@ public class Testing : MonoBehaviour
             _playerVelocity.y = 0f;
         }
 
-        var horizontal = Input.GetAxisRaw("Horizontal");
-        var vertical = Input.GetAxisRaw("Vertical");
+        var horizontal =  Input.GetAxisRaw("Horizontal");
+        var vertical =  Input.GetAxisRaw("Vertical");
         var direction = new Vector3(horizontal, 0f, vertical).normalized;
 
         if (direction.magnitude >= 0.1f)
@@ -41,13 +43,10 @@ public class Testing : MonoBehaviour
             controller.Move(moveDir.normalized * (speed * Time.deltaTime));
         }
         
-
-
-        // If the player presses the jump button and they are grounded,
-        // give them an upward velocity.
-        if (Input.GetButtonDown("Jump") && _groundedPlayer)
+        
+        // If the player presses the jump button and they are grounded, give them an upward velocity.
+        if (playerInput.actions["Jump"].IsPressed() && _groundedPlayer)
         {
-            Debug.Log("Grounded player && jump button pressed"); 
             _playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
         }
 
